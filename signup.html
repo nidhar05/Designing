@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-body">
+
+    <div class="auth-card">
+
+        <h2>Create Account</h2>
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Password">
+
+        <button class="auth-btn" type="button">Sign Up</button>
+    <script>
+        document.querySelector('.auth-btn').addEventListener('click', function() {
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+        <p>Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

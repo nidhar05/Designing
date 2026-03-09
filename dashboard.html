@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - E Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Same navbar as index.html but with user-menu instead of login/signup -->
+    <header class="navbar">
+        <h2 class="logo">E Learning</h2>
+        <input type="text" placeholder="Search for anything" class="search">
+            <div class="user-menu">
+                <a href="mylearning.html" class="my-learning">My learning</a>
+                <div class="nav-icons">
+                    <!-- Heart / Likes -->
+                    <a href="wishlist.html" style="color: inherit;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+                    <!-- Notifications -->
+                    <a href="notification.html" style="color: inherit;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></a>
+                </div>
+                <!-- Avatar with dropdown -->
+                <div class="profile-wrapper">
+                    <div class="avatar" id="avatarBtn">NS</div>
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <!-- User info -->
+                        <div class="profile-header">
+                            <div class="avatar-lg">NS</div>
+                            <div class="profile-header-info">
+                                <strong>NS User</strong>
+                                <p>ns@example.com</p>
+                            </div>
+                        </div>
+                        <!-- Menu items -->
+                        <div class="dropdown-section">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="mylearning.html" class="dropdown-item">My learning</a>
+                            <a href="wishlist.html" class="dropdown-item">Wishlist</a>
+                            <a href="notification.html" class="dropdown-item">Notifications</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <a href="login.html" class="dropdown-item logout">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="title">
+        <h1>Welcome Back! Continue Learning.</h1>
+        <p>Pick up where you left off or explore something new.</p>
+    </section>
+
+    <div class="tabs">
+        <span class="tab active" onclick="showCourses(this, 'all')">All Courses</span>
+        <span class="tab" onclick="showCourses(this, 'ai')">Artificial Intelligence</span>
+        <span class="tab" onclick="showCourses(this, 'python')">Python</span>
+        <span class="tab" onclick="showCourses(this, 'web')">Web Development</span>
+        <span class="tab" onclick="showCourses(this, 'design')">Design</span>
+    </div>
+
+    <!-- ALL COURSES (20 cards) -->
+    <div class="courses" id="all">
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/c1/300/180">
+                <a href="wishlist.html" class="wishlist-btn-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+            </div>
+            <h3>AI Strategy & Governance</h3>
+            <p>School of AI</p>
+            <span class="rating">⭐ 4.5</span>
+            <h4>₹539</h4>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/c2/300/180">
+                <a href="wishlist.html" class="wishlist-btn-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+            </div>
+            <h3>Machine Learning Basics</h3>
+            <p>Andrew AI</p>
+            <span class="rating">⭐ 4.7</span>
+            <h4>₹649</h4>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/c3/300/180">
+                <a href="wishlist.html" class="wishlist-btn-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
+            </div>
+            <h3>Python for Beginners</h3>
+            <p>John Smith</p>
+            <span class="rating">⭐ 4.6</span>
+            <h4>₹499</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c4/300/180">
+            <h3>Full Stack AI Engineer</h3>
+            <p>School of AI</p>
+            <span class="rating">⭐ 4.3</span>
+            <h4>₹519</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c5/300/180">
+            <h3>Data Science with Python</h3>
+            <p>Andrew AI</p>
+            <span class="rating">⭐ 4.4</span>
+            <h4>₹699</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c6/300/180">
+            <h3>React.js Masterclass</h3>
+            <p>Web Guru</p>
+            <span class="rating">⭐ 4.8</span>
+            <h4>₹799</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c7/300/180">
+            <h3>UI/UX Design Fundamentals</h3>
+            <p>Design Studio</p>
+            <span class="rating">⭐ 4.6</span>
+            <h4>₹449</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c8/300/180">
+            <h3>Node.js & Express</h3>
+            <p>Code Academy</p>
+            <span class="rating">⭐ 4.5</span>
+            <h4>₹599</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c9/300/180">
+            <h3>Deep Learning with TensorFlow</h3>
+            <p>AI Labs</p>
+            <span class="rating">⭐ 4.7</span>
+            <h4>₹899</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c10/300/180">
+            <h3>Django Web Development</h3>
+            <p>David Lee</p>
+            <span class="rating">⭐ 4.5</span>
+            <h4>₹599</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c11/300/180">
+            <h3>Figma for Designers</h3>
+            <p>Creative Hub</p>
+            <span class="rating">⭐ 4.9</span>
+            <h4>₹349</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c12/300/180">
+            <h3>Cloud Computing AWS</h3>
+            <p>Tech School</p>
+            <span class="rating">⭐ 4.4</span>
+            <h4>₹749</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c13/300/180">
+            <h3>Cybersecurity Essentials</h3>
+            <p>SecPro</p>
+            <span class="rating">⭐ 4.3</span>
+            <h4>₹549</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c14/300/180">
+            <h3>Digital Marketing Pro</h3>
+            <p>Marketing Hub</p>
+            <span class="rating">⭐ 4.6</span>
+            <h4>₹399</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c15/300/180">
+            <h3>Excel Data Analysis</h3>
+            <p>Analytics Hub</p>
+            <span class="rating">⭐ 4.3</span>
+            <h4>₹549</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c16/300/180">
+            <h3>JavaScript Advanced</h3>
+            <p>JS Ninja</p>
+            <span class="rating">⭐ 4.8</span>
+            <h4>₹669</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c17/300/180">
+            <h3>Photoshop Masterclass</h3>
+            <p>Adobe Pro</p>
+            <span class="rating">⭐ 4.5</span>
+            <h4>₹479</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c18/300/180">
+            <h3>Flutter Mobile Dev</h3>
+            <p>App Academy</p>
+            <span class="rating">⭐ 4.7</span>
+            <h4>₹719</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c19/300/180">
+            <h3>SQL for Data Analysts</h3>
+            <p>Data School</p>
+            <span class="rating">⭐ 4.6</span>
+            <h4>₹429</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/seed/c20/300/180">
+            <h3>DevOps & Docker</h3>
+            <p>DevPro</p>
+            <span class="rating">⭐ 4.4</span>
+            <h4>₹829</h4>
+        </div>
+
+    </div>
+
+    <!-- AI sub-tab -->
+    <div class="courses hidden" id="ai">
+        <div class="card"><img src="https://picsum.photos/seed/ai1/300/180"><h3>AI Strategy & Governance</h3><p>School of AI</p><span class="rating">⭐ 4.5</span><h4>₹539</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/ai2/300/180"><h3>Machine Learning Basics</h3><p>Andrew AI</p><span class="rating">⭐ 4.7</span><h4>₹649</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/ai3/300/180"><h3>Full Stack AI Engineer</h3><p>School of AI</p><span class="rating">⭐ 4.3</span><h4>₹519</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/ai4/300/180"><h3>Deep Learning with TensorFlow</h3><p>AI Labs</p><span class="rating">⭐ 4.7</span><h4>₹899</h4></div>
+    </div>
+
+    <!-- Python sub-tab -->
+    <div class="courses hidden" id="python">
+        <div class="card"><img src="https://picsum.photos/seed/py1/300/180"><h3>Python for Beginners</h3><p>John Smith</p><span class="rating">⭐ 4.6</span><h4>₹499</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/py2/300/180"><h3>Data Science with Python</h3><p>Andrew AI</p><span class="rating">⭐ 4.4</span><h4>₹699</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/py3/300/180"><h3>Django Web Development</h3><p>David Lee</p><span class="rating">⭐ 4.5</span><h4>₹599</h4></div>
+    </div>
+
+    <!-- Web Development sub-tab -->
+    <div class="courses hidden" id="web">
+        <div class="card"><img src="https://picsum.photos/seed/wb1/300/180"><h3>React.js Masterclass</h3><p>Web Guru</p><span class="rating">⭐ 4.8</span><h4>₹799</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/wb2/300/180"><h3>Node.js & Express</h3><p>Code Academy</p><span class="rating">⭐ 4.5</span><h4>₹599</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/wb3/300/180"><h3>JavaScript Advanced</h3><p>JS Ninja</p><span class="rating">⭐ 4.8</span><h4>₹669</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/wb4/300/180"><h3>Flutter Mobile Dev</h3><p>App Academy</p><span class="rating">⭐ 4.7</span><h4>₹719</h4></div>
+    </div>
+
+    <!-- Design sub-tab -->
+    <div class="courses hidden" id="design">
+        <div class="card"><img src="https://picsum.photos/seed/ds1/300/180"><h3>UI/UX Design Fundamentals</h3><p>Design Studio</p><span class="rating">⭐ 4.6</span><h4>₹449</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/ds2/300/180"><h3>Figma for Designers</h3><p>Creative Hub</p><span class="rating">⭐ 4.9</span><h4>₹349</h4></div>
+        <div class="card"><img src="https://picsum.photos/seed/ds3/300/180"><h3>Photoshop Masterclass</h3><p>Adobe Pro</p><span class="rating">⭐ 4.5</span><h4>₹479</h4></div>
+    </div>
+
+    <script>
+        function showCourses(element, category) {
+            document.querySelectorAll('.courses').forEach(sec => sec.classList.add('hidden'));
+            let cat = document.getElementById(category);
+            if (cat) cat.classList.remove('hidden');
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Profile dropdown toggle
+        const avatarBtn = document.getElementById('avatarBtn');
+        const profileDropdown = document.getElementById('profileDropdown');
+
+        avatarBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            profileDropdown.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!profileDropdown.contains(e.target) && e.target !== avatarBtn) {
+                profileDropdown.classList.remove('open');
+            }
+        });
+    </script>
+
+</body>
+</html>
