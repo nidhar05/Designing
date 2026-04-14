@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+:root {
+  --background: #2f3140;
+  --foreground: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #2f3140;
+  color: #e2e8f0;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #1e1f26;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar a,
+.navbar button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  margin-left: 0;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar button {
+  background: transparent;
+}
+
+/* SEARCH BAR */
+
+.search {
+  width: 420px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #3b3d4d;
+  color: white;
+  outline: none;
+  font-family: inherit;
+}
+
+.search::placeholder {
+  color: #9ca3af;
+}
+
+/* BUTTONS */
+
+.navbar a {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid #3b3d4d;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.login:hover {
+  background: #3b3d4d;
+  color: white;
+}
+
+.signup {
+  background: #2563eb;
+  color: white;
+  transition: 0.3s;
+}
+
+.signup:hover {
+  background: #1d4ed8;
+}
+
+/* TITLE SECTION */
+
+.title {
+  padding: 40px;
+  padding-left: 60px;
+}
+
+.title h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #f8fafc;
+}
+
+.title p {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+/* TABS */
+
+.tabs {
+  display: flex;
+  gap: 30px;
+  padding-left: 60px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 12px;
+}
+
+.tab {
+  cursor: pointer;
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.tab.active {
+  color: white;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 6px;
+}
+
+/* COURSES SECTION */
+
+.courses {
+  display: flex;
+  gap: 25px;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+/* COURSE CARD */
+
+.card {
+  width: 260px;
+  background: #1e1f26;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 15px 0 8px;
+  color: #f8fafc;
+}
+
+.card p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.rating {
+  color: #facc15;
+  font-size: 14px;
+}
+
+.card h4 {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* HIDE TABS */
+
+.hidden {
+  display: none;
+}
+
+/* AUTH PAGES */
+
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2f3140;
+}
+
+.auth-card {
+  background: #1e1f26;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f8fafc;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #3b3d4d;
+  color: white;
+  outline: none;
+  font-family: inherit;
+}
+
+.auth-card input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  background: #1d4ed8;
+}
+
+.auth-card p {
+  text-align: center;
+  margin-top: 20px;
+  color: #cbd5e1;
+}
+
+.auth-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
